@@ -1,30 +1,30 @@
-export default function createMenu() {
+export default function createChefs() {
     const container = document.createElement('div');
     const header = document.createElement('header');
+    const board = document.createElement('div');
     const logo = document.createElement('div');
-    const search = document.createElement('div');
 
     container.classList.add('container');
-    logo.classList.add('logo')
-    search.classList.add('search');
+    logo.classList.add('logo');
+    board.classList.add('announcement');
 
     logo.textContent = 'GrubHubbub';
-    search.textContent = 'find a GrubHubbub near you';
+    board.textContent='Chefs leaderboard';
     header.appendChild(logo);
-    header.appendChild(search);
+    header.appendChild(board);
     container.appendChild(header);
 
     const main = document.createElement('main');
 
-    const chefs = ['Tom', 'Matthew', 'Dan', 'Jack', 'William', 'Michael', 'Jim', 'Klaus', 'Barry'];
+    const chefs = ['Tom', 'Matthew', 'Dan', 'Jack', 'William', 'Megan', 'Jim', 'Klaus', 'Sarah'];
 
     for (let i = 0; i < 9; i++) {
         let card = document.createElement('div');
-        card.classList.add('location');
+        card.classList.add('chef');
         let address = document.createElement('p');
         let content = document.createElement('p');
-        card.textContent = chefs[i];
-        address.textContent = 'review';
+        card.textContent = `#${i+1}`;
+        address.textContent = chefs[i];
         content.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe sit commodi distinctio fugiat deleniti, incidunt quos quaerat. Aliquam culpa, ipsa incidunt iusto dolore amet reprehenderit sunt consequuntur.';
         card.appendChild(address);
         card.appendChild(content);
