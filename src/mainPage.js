@@ -23,16 +23,63 @@ export default function createMain() {
 
     const main = document.createElement('main');
 
-    const locations = ['Mumbai', 'Delhi', 'Kolkata', 'Bangalore', 'Pune', 'Chennai', 'Kolhapur', 'Lucknow', 'Coimbatore'];
+    const venues = [
+        {
+            location: 'Mumbai',
+            address: 'juhu beach 1461',
+            special: 'Lorem ipsum dolrat. Aliquam culpa, ipsa incidunt iusto dolore amet reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Delhi',
+            address: 'evergreen plaza, west delhi',
+            special: 'Lorem ipsum a, local fresh pizzeria.'
+        },
+        {
+            location: 'Bangalore',
+            address: 'mega mall, downtown',
+            special: 'great crust sandwich, Cum in eos saepe sit commodiiti, incidudunt iusto dolore amet reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Calcutta',
+            address: 'mini mall, flour factory',
+            special: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe sit commodi distinctio fugiat deleniti, incidunt quos quaerat. Aliquam culpa,'
+        },
+        {
+            location: 'Chennai',
+            address: 'marine drive 954',
+            special: ' elit. drive thru diner. Aliquam culpa, ipsa incidunt iusto dolore amet reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Pune',
+            address: 'deccan pool 321',
+            special: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe sit commodi distinctio fugiat deleniti, incidunt quos quaerat. fresh fruit market iusto dolore amet reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Lucknow',
+            address: 'ganga mall, westside',
+            special: 'Lorem ipsum whatever you want! distinctio fugiat deleniti, incidunpsa incidunt iusto dolore amet reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Coimbatore',
+            address: 'kest port, northside',
+            special: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe siteniti, incidunt quos quaerat. Aliquam culpa, egyptian tacos with sauce! reprehenderit sunt consequuntur.'
+        },
+        {
+            location: 'Kolhapur',
+            address: 'ahead of the one behind',
+            special: 'Nothing much here, its quite a small town. just the- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe sit commodi distinctio fugiat deleniti, incidunt quos quaerat'
+        },
+
+    ];
 
     for (let i = 0; i < 9; i++) {
         let card = document.createElement('div');
         card.classList.add('location');
         let address = document.createElement('p');
         let content = document.createElement('p');
-        card.textContent = locations[i];
-        address.textContent = 'address';
-        content.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum in eos saepe sit commodi distinctio fugiat deleniti, incidunt quos quaerat. Aliquam culpa, ipsa incidunt iusto dolore amet reprehenderit sunt consequuntur.';
+        card.textContent = venues[i].location;
+        address.textContent = venues[i].address;
+        content.textContent = venues[i].special;
         card.appendChild(address);
         card.appendChild(content);
         main.appendChild(card);
