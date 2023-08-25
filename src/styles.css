@@ -171,3 +171,41 @@ footer{
 .fab:hover{
     transform: rotate(360deg) scale(1.2);
 }
+
+@media (max-width: 1000px) {
+    header{
+        height: 30vh;
+    }
+
+    .search{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 724px) {
+    body{
+        align-items: center;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+        height: 10vh;
+    }
+
+    header .logo{
+        display: none;
+    }
+
+    .search{
+        font-size: 0.8em;
+        width: 250px;
+        padding-right: 24px;
+    }
+
+    .item,
+    .chef
+    {
+        width: 250px;
+    }
+}
