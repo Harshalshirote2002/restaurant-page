@@ -1,15 +1,22 @@
+import image1 from './images/menu.png';
+import image2 from './images/icon4.png';
+
 export default function createMenu() {
     const container = document.createElement('div');
     const header = document.createElement('header');
-    const logo = document.createElement('div');
+    const logo = new Image();
     const search = document.createElement('div');
 
     container.classList.add('container');
     logo.classList.add('logo')
     search.classList.add('search');
 
-    logo.textContent = 'GrubHubbub';
+    logo.src = image1;
+    const menuLogo = new Image();
+    menuLogo.src = image2;
     search.textContent = 'enter your favorite item';
+    menuLogo.classList.add('search-bar-image')
+    search.appendChild(menuLogo);
     header.appendChild(logo);
     header.appendChild(search);
     container.appendChild(header);

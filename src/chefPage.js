@@ -1,14 +1,16 @@
+import image1 from './images/leaderboard1.png';
+
 export default function createChefs() {
     const container = document.createElement('div');
     const header = document.createElement('header');
     const board = document.createElement('div');
-    const logo = document.createElement('div');
+    const logo = new Image();
 
     container.classList.add('container');
     logo.classList.add('logo');
     board.classList.add('announcement');
 
-    logo.textContent = 'GrubHubbub';
+    logo.src = image1;
     board.textContent='Chefs leaderboard';
     header.appendChild(logo);
     header.appendChild(board);

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -20,6 +24,9 @@ body{
     width: 100%;
     justify-content: space-around;
     background-color: rgb(127, 223, 255);
+    font-family: 'ADLaM Display', cursive;
+    position: sticky;
+    top: 0;
 }
 
 .navigator-tab p{
@@ -30,10 +37,15 @@ body{
     justify-content: center;
 }
 
+.navigator-tab p:hover{
+    cursor: pointer;
+}
+
 .navigator-tab .active-focus{
-    background-color: rgb(246, 250, 254);
-    border-top-left-radius: 15px;    
-    border-top-right-radius: 15px;
+    background-color: rgb(240, 247, 254);
+    border-top-left-radius: 25px;    
+    border-top-right-radius: 25px;
+    /* border-bottom-left-radius: 50px; */
 }
 
 .container{
@@ -56,6 +68,12 @@ header{
 .logo{
     font-size: 64px;
     font-weight: 900;
+    height: 30vh;
+    z-index: -1;
+}
+
+.search-bar-image{
+    width: 32px;
 }
 
 .search{
@@ -65,11 +83,18 @@ header{
     border-radius: 15px;
     font-size: 22px;
     place-content: center;
-    padding-left: 10px;
+    padding-right: 10px;
     background-color: rgb(127, 223, 255);
     display: flex;
-    align-items: flex-end;
-    justify-content: left;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.search:hover{
+    cursor: text;
 }
 
 main{
@@ -111,6 +136,9 @@ footer{
     gap: 8px;
     padding-top: 24px;
     padding-bottom: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .fab{
@@ -145,14 +173,14 @@ footer{
 }
 
 .announcement{
-    height: 28px;
     width: 350px;
-    font-size: 22px;
+    font-size: 32px;
     place-content: center;
     padding-left: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: left;
+    font-family: 'Castoro Titling', cursive;
 }
 
 .chef{

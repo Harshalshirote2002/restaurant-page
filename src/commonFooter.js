@@ -1,6 +1,6 @@
 export default function createFooter(){
     const footer = document.createElement('footer');
-    footer.textContent=`Copyright © ${new Date().getFullYear()} HarshalShirote2002`;
+    footer.textContent=`Copyright © ${new Date().getFullYear()} HarshalShirote`;
     const a = document.createElement('a');
     a.href = 'https://github.com/Harshalshirote2002';
     a.target='_blank';

@@ -1,15 +1,22 @@
+import image1 from './images/icon3.png';
+import image2 from './images/location1.png';
+
 export default function createMain() {
     const container = document.createElement('div');
     const header = document.createElement('header');
-    const logo = document.createElement('div');
+    const logo = new Image();
     const search = document.createElement('div');
 
     container.classList.add('container');
     logo.classList.add('logo')
     search.classList.add('search');
 
-    logo.textContent = 'GrubHubbub';
-    search.textContent = 'find a GrubHubbub near you';
+    logo.src=image1;
+    const location = new Image();
+    location.src = image2;
+    location.classList.add('search-bar-image');
+    search.textContent = 'find the nearest Eats-a-Mazing';
+    search.appendChild(location);
     header.appendChild(logo);
     header.appendChild(search);
     container.appendChild(header);

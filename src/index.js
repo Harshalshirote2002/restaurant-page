@@ -14,7 +14,7 @@ function createNavTab(focus){
     const main = document.createElement('p');
     const menu = document.createElement('p');
     const chefs = document.createElement('p');
-    main.textContent = 'MainPage';
+    main.textContent = 'Home';
     menu.textContent = 'Menu';
     chefs.textContent = 'Chefs';
     main.classList.add('main-page');
